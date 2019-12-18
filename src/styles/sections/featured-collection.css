@@ -67,8 +67,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
+  position: relative;
 }
 
 .product-wrapper {
@@ -158,5 +157,9 @@ span.product-btn {
   font-weight: bold;
   line-height: 23px;
   text-align: center;
+}
+
+.carousel {
+  width: 100%;
 }
 /*# sourceMappingURL=featured-collection.css.map */

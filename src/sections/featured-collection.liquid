@@ -5,27 +5,27 @@
   - Main styling is done in /styles/sections/featured-collection.scss
 ------------------------------------------------------------------------------
 {% endcomment %}
-
 <section class="featured-collection" data-section-id="{{ section.id }}" data-section-type="featured-collection">
   {%- assign collection = collections[section.settings.collection] -%}
 <div class="container">
   <h2>{{ collection.title | escape }}</h2>
 
   <p>{{ collection.description }}</p>
-</div>
 
+</div>
 <div class="flickity-wrapper">
+  <div class="carousel">
   {% for product in collection.products limit: 6 %}
     {% assign current_variant = product.selected_or_first_available_variant %}
   <div class="product-wrapper">
     <a href="{{ product.url | within: collection }}">
-      <div class="hover">
+     
         {% if product.featured_image != blank %}
           {{ product.featured_image | img_url: 'large' | img_tag }}
         {% endif %}
         
         <span class="product-btn" js-ajax-cart="addToCart" data-variant-id="{{ current_variant.id }}" data-quantity="1">Add to cart</span>
-      </div>
+   
       {% if product.compare_at_price > product.price %}
       <span class="sale">sale</span>
       {% endif %}
@@ -39,7 +39,9 @@
     </a>
   </div>
   {% endfor %}
-  <div class="container">
+</div>
+</div>
+  <div class="bottom">
   {% if section.settings.button %}
 
   <a class="action_btn" href="/">view collection</a>
