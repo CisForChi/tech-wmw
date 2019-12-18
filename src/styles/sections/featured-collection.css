@@ -1,0 +1,162 @@
+/**
+ * Sections: Featured collection
+ * -----------------------------------------------------------------------------
+ * Base styling for the featured collection product grid.
+ *
+ */
+.featured-collection {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.featured-collection .container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.featured-collection h2 {
+  color: #003366;
+  font-family: "Helvetica Neue";
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 49px;
+  text-align: center;
+}
+
+.featured-collection .container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 50px 25px;
+}
+
+.featured-collection p {
+  color: #9B9B9B;
+  font-family: "Helvetica Neue";
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .featured-collection {
+    width: 1390px;
+    max-width: 100%;
+  }
+}
+
+.flickity-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+.product-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border: 1px solid red;
+  width: 33.3%;
+  min-height: 551px;
+  text-align: left;
+}
+
+.product-wrapper a {
+  text-decoration: none;
+  text-align: left;
+}
+
+.product-wrapper p {
+  color: #003366;
+  font-family: "Helvetica Neue";
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: left;
+}
+
+.product-wrapper .hover [js-ajax-cart="addToCart"] {
+  display: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.product-wrapper .hover:hover [js-ajax-cart="addToCart"] {
+  display: block;
+}
+
+.product-wrapper .sale {
+  position: absolute;
+  line-height: 27px;
+  height: 27px;
+  width: 56px;
+  background-color: #003366;
+  top: 3%;
+  right: 25%;
+  height: 26px;
+  width: 56px;
+  color: #FFFFFF;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: center;
+}
+
+.product-wrapper .price {
+  color: #9B9B9B;
+  font-family: "Helvetica Neue";
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+}
+
+span.product-btn {
+  display: none;
+}
+
+.action_btn {
+  height: 55px;
+  width: 175px;
+  background-color: #003366;
+  margin: 0 auto;
+  color: #FFFFFF;
+  font-family: "Helvetica Neue";
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 23px;
+  text-align: center;
+}
+/*# sourceMappingURL=featured-collection.css.map */

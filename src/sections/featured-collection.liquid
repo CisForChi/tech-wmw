@@ -8,33 +8,49 @@
 
 <section class="featured-collection" data-section-id="{{ section.id }}" data-section-type="featured-collection">
   {%- assign collection = collections[section.settings.collection] -%}
-
+<div class="container">
   <h2>{{ collection.title | escape }}</h2>
 
   <p>{{ collection.description }}</p>
+</div>
 
+<div class="flickity-wrapper">
   {% for product in collection.products limit: 6 %}
     {% assign current_variant = product.selected_or_first_available_variant %}
-  
+  <div class="product-wrapper">
     <a href="{{ product.url | within: collection }}">
-      <div>
+      <div class="hover">
         {% if product.featured_image != blank %}
           {{ product.featured_image | img_url: 'large' | img_tag }}
         {% endif %}
         
-        <span js-ajax-cart="addToCart" data-variant-id="{{ current_variant.id }}" data-quantity="1">Add to cart</span>
+        <span class="product-btn" js-ajax-cart="addToCart" data-variant-id="{{ current_variant.id }}" data-quantity="1">Add to cart</span>
       </div>
-
+      {% if product.compare_at_price > product.price %}
+      <span class="sale">sale</span>
+      {% endif %}
       <div>
         <p>{{ product.title | escape }}</p>
 
-        <span>
+        <span class="price">
           {% include 'product-price' %}
         </span>
       </div>
     </a>
+  </div>
   {% endfor %}
+  <div class="container">
+  {% if section.settings.button %}
+
+  <a class="action_btn" href="/">view collection</a>
+  {% endif %}
+</div>
+  </div>
 </section>
+
+
+
+
 
 {% schema %}
   {
@@ -50,6 +66,12 @@
         "id": "collection",
         "type": "collection",
         "label": "Collection"
+      },
+      {
+        "id": "button",
+        "type": "checkbox",
+        "label": "Show View More Collection Button",
+        "default":true
       }
     ],
     "presets": [

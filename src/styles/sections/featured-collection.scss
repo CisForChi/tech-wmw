@@ -4,6 +4,101 @@
  * Base styling for the featured collection product grid.
  *
  */
+
 .featured-collection {
-  
+    .container {
+        width:70%;
+        margin:0 auto;
+        padding:50px;
+    }
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+   h2{
+
+    color: #003366;	font-family: "Helvetica Neue";	font-size: 40px;	font-weight: bold;	line-height: 49px;	text-align: center;}
+     .container {
+     width:70%;
+     margin:0 auto;
+     padding:50px 25px;
+ 
+   }
+   p {
+    color: #9B9B9B;	font-family: "Helvetica Neue";	font-size: 18px;	font-weight: 300;	line-height: 26px;	text-align: center;
+   }
+    @media (min-width:1200px) {
+width:1390px;
+max-width:100%;
+
+    }
+
+// h2 {
+//     color:$blue;
+// }
+//     }
+}
+.flickity-wrapper {
+    width:100%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+
+    
+}
+.product-wrapper {
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    margin:0 auto;
+    justify-content:space-between;
+    align-items:flex-start;
+    border:1px solid red;
+    width:33.3%;
+    min-height:	551px;	
+ text-align:left;
+a {
+    text-decoration:none;
+    text-align:left;
+
+}
+  p {
+    color: #003366;	font-family: "Helvetica Neue";	font-size: 21px;	font-weight: bold;	line-height: 26px;
+    text-align:left;
+  }
+  .hover {
+  [js-ajax-cart="addToCart"] {
+      display:none;
+      transition:.5s;
+  }
+}
+  .hover:hover {
+    [js-ajax-cart="addToCart"] {
+        display:block;
+    }
+  }
+  .sale {
+      position:absolute;
+     line-height:27px;
+      height: 27px;	width: 56px;	background-color: #003366;
+      top: 3%;
+    right: 25%;
+      height: 26px;	width: 56px;	color: #FFFFFF;	font-family: "Helvetica Neue";	font-size: 14px;	font-weight: bold;	line-height: 26px;	text-align: center;
+  }
+  .price {
+   	color: #9B9B9B;	font-family: "Helvetica Neue";	font-size: 18px;	font-weight: 300;	line-height: 26px;
+  }
+}  
+
+span.product-btn {
+    display:none;
+}
+.action_btn {
+    height: 55px;	width: 175px;
+    background-color: #003366;
+    margin:0 auto;
+    
+   color: #FFFFFF;	font-family: "Helvetica Neue";	font-size: 18px;	font-weight: bold;	line-height: 23px;	text-align: center;
 }
