@@ -4,35 +4,42 @@
  * Base styling for the featured collection product grid.
  *
  */
+
+ // custom styles
+
+ 
+
  a {
   text-decoration:none;
 }
 .featured-collection {
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
     .container {
       width:100%;
-      padding:15px 25px;
+      margin: 0 auto;
       @include media-query($medium-up) {
-      width: 47%;
-        margin:0 auto;
-        padding:50px;
-      }
-      
-
-     
+        width: 43%;
+       }
     }
-    margin:0 auto;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-   h2{
-    color: #003366;	font-family: "Helvetica Neue";
+      h2 {
+    color: $blue;
+  	font-family: "Helvetica Neue";
     text-align: center;
     font-weight: bold;
+    
     @include media-query($medium-down) {
-      font-size: 28px;		line-height: 34px;
+      font-size: 28px;		
+      line-height: 34px;
      }
-    	font-size: 40px;		line-height: 49px;}
+      
+    font-size: 40px;		
+    line-height: 49px;
+  }
 
    p {
     font-weight: 300;
@@ -48,11 +55,6 @@ width:1390px;
 max-width:100%;
 
     }
-
-// h2 {
-//     color:$blue;
-// }
-//     }
 }
 
 span.product-btn {
@@ -65,11 +67,13 @@ span.product-btn {
     display:block;
     line-height:55px;
     margin:0 auto;
+    border:1px solid transparent;
     
    color: #FFFFFF;	font-family: "Helvetica Neue";	font-size: 18px;	font-weight: bold;		text-align: center;
 &:hover {
   background:#fff;
   color:$blue;
+  border-color:$blue;
 }
 
   }
@@ -80,23 +84,28 @@ span.product-btn {
   .flickity-button {
     color:$blue;
     position:absolute;
-    top:30%;
+    top:34%;
     background:transparent;
     outline:transparent;
-    width:30px;
-    height:30px;
+    width:4%;
+    height:auto;
     border:none;
-
+    transition:.4s;
+&:active {
+  svg {
+    fill:$blue;
+  }
+}
     svg {
-      fill:#333333;
+      fill:#9C9C9C;
     }
 
   }
   .next {
-    right:0;
+    right: -6%;
   }
-  .prev {
-    left:0;
+  .previous {
+    left:-6%;
   }
 }
 .flickity-wrapper {
@@ -112,7 +121,7 @@ span.product-btn {
   }
   margin:0 auto;
 
-    overflow: hidden;
+    overflow: visible;
 }
 
 
@@ -176,8 +185,8 @@ a {
       color: #003366;	font-family: "Helvetica Neue";	font-size: 18px;	font-weight: bold;	line-height: 47px;	text-align: center;
   
       &:hover {
-        background:#fff;
-        color:$blue;
+        background:$blue;
+        color:#fff;
       }
   
     }
@@ -223,14 +232,14 @@ p {
  
     text-align:center;
     li {
-      width: 10px;
-    height: 10px;
+      width: 7px;
+    height: 7px;
     color: #fff;
-    background:#D1D1D1;
+    background: #D1D1D1;
     border-radius: 100%;
- display:inline-block;
- margin-right: 13px;
- margin-left: 13px;
+    display: inline-block;
+    margin-right: 7px;
+    margin-left: 3px;
 
 
     }
@@ -238,13 +247,11 @@ p {
         margin: 0;
         padding: 0;
         width: 100%;
-        justify-content:center;
+       
         
 
         li {
-          margin: 0px 10px;
-          height: 7px;
-          	width: 7px;
+        
         }
        }
        
@@ -263,9 +270,31 @@ p {
  	font-size: 14px;	line-height: 21px;
 }
 .bottom {
-  margin: 25px 0px;
+padding-bottom:50px;
+  padding-top:50px;
+  margin:0 auto;
   @include media-query($medium-down) {
 
-margin-top:10px;
+padding-top:25px;
+padding-bottom:25px;
   }
 }
+
+em {
+display:none;
+}
+
+[aria-hidden="true"] {
+  visibility:hidden;
+}
+
+// flickity fade animation
+
+
+
+.product-wrapper {
+
+  transition: opacity 0.3s ease-in-out;
+
+}
+
